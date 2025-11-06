@@ -44,7 +44,7 @@
                     <span class="text-bg-primary badge"><i class=""></i>{{$category["name"]}}</span>
                     @endforeach
                 </div>
-                <h1 class="fw-bold">{{$company["name"]}}</h1>
+                <h1 class="fw-bold title">{{$company["name"]}}</h1>
                 <p><i class="fa-regular fa-user me-2"></i>Fundada por {{$company["founder"]}}</p>
                 <!-- <hr> -->
                 <div class="py-2">
