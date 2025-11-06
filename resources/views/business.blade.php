@@ -26,6 +26,12 @@
         #tour-bg::before {
             background-image: url("https://static.photos/office/640x360?id={{uniqid()}}");
         }
+
+        #tour-bg::before {
+            @if (empty($company["banner"])) background-image: url("https://static.photos/office/640x360?id={{uniqid()}}");
+            @else background-image: url("{{asset('assets/img/banners/').'/'.$company['banner']}}");
+            @endif
+        }
     </style>
 </head>
 
@@ -39,19 +45,32 @@
     <section class="py-4 container">
         <div class="row g-4">
             <div class="col-lg-8 col-md-12 col-12">
-                <div class="py-4">
+                <div class="">
                     @foreach ($company["categories"] as $category)
-                    <span class="text-bg-primary badge"><i class=""></i>{{$category["name"]}}</span>
+                    <span class="text-bg-primary badge mb-3"><i class=""></i>{{$category["name"]}}</span>
                     @endforeach
-                </div>
-                <h1 class="fw-bold title">{{$company["name"]}}</h1>
-                <p><i class="fa-regular fa-user me-2"></i>Fundada por {{$company["founder"]}}</p>
-                <!-- <hr> -->
-                <div class="py-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="fw-bold">Acerca de nosotros</h3>
-                            <p>{{$company["about_us"]}}</p>
+
+                    <div class="row">
+
+                        @if (!empty($company["logo"]))
+                        <!-- <div class="col-auto my-auto"> -->
+                        <p class="my-auto m-0">
+                            <img class="my-auto" src="{{ asset('assets/img/logos/').'/'.$company['logo'] }}" alt="" height="70">
+                        </p>
+                        <!-- </div> -->
+                        @endif
+                        <div class="col-auto">
+                            <h1 class="fw-bold title">{{$company["name"]}}</h1>
+                        </div>
+                    </div>
+                    <p class="description"><i class="fa-regular fa-user me-2"></i>Fundada por {{$company["founder"]}}</p>
+                    <!-- <hr> -->
+                    <div class="py-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="fw-bold">Acerca de nosotros</h3>
+                                <p>{{$company["about_us"]}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

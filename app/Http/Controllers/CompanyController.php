@@ -69,6 +69,7 @@ class CompanyController extends Controller
                     'mail' => $row['mail'],
                     'phone' => $row['phone'],
                     'banner' => $row['banner'],
+                    'logo' => $row['logo'],
                     'categories' => [],
                 ];
             }
@@ -85,6 +86,7 @@ class CompanyController extends Controller
         // reindex array to remove numeric keys
         $company = array_values($companies);
         $data["company"] = $company[0];
+        // dd($data);
         return view("business", $data);
     }
 }

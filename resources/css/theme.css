@@ -247,3 +247,9 @@ th, td, tr,
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
+
+
+.card-img-top {
+    object-fit: cover;
+    height: 14rem;
+}

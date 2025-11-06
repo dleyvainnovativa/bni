@@ -29,7 +29,7 @@
                     <small class="description">Descubre y conéctate con empresas innovadoras de diversas industrias. Crea relaciones comerciales significativas que impulsen el crecimiento.</small>
                 </div>
                 <div class="col-12 py-4">
-                    <a class="btn btn-light text-primary btn-lg" href="{{env('APP_URL')}}search"><i class="fas fa-search me-3"></i>Buscar empresas</a>
+                    <a class="btn btn-outline-light btn-lg" href="{{env('APP_URL')}}search"><i class="fas fa-search me-3"></i>Buscar empresas</a>
                 </div>
             </div>
         </div>

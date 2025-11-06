@@ -53,7 +53,12 @@
                             <div class="position-absolute">
                                 <span class="badge text-bg-primary p-2 m-2"></span>
                             </div>
+                            @if (empty($company["banner"]))
                             <img src="https://static.photos/office/640x360?id={{uniqid()}}" class="card-img-top" alt="...">
+                            @else
+                            <img src="{{asset('assets/img/banners/').'/'.$company['banner']}}" class="card-img-top" alt="...">
+                            @endif
+                            <!-- <img src="https://static.photos/office/640x360?id={{uniqid()}}" class="card-img-top" alt="..."> -->
 
                             <div class="card-body">
                                 <h5 class="card-title">{{$company["name"]}}</h5>
