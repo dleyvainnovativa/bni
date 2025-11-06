@@ -1,0 +1,285 @@
+:root {
+    --bs-primary-rgb: 207, 32, 48;
+    --bs-secondary-rgb: 50, 120, 218;
+    --primary-color: #CF2030;
+    --light-color: #d8d8d8;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --primary-color-hover: #1158bb;
+    --secondary-color: #3278da;
+    --secondary-color-hover: #2c6bc2;
+    --bs-nav-pills-link-active-bg: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--primary-color-hover);
+    --bs-btn-hover-border-color: var(--primary-color-hover);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-color-hover);
+    --bs-btn-active-border-color: var(--primary-color-hover);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary-color);
+    --bs-btn-disabled-border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--primary-color);
+    --bs-btn-hover-border-color: var(--primary-color);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-color);
+    --bs-btn-active-border-color: var(--primary-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--primary-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--primary-color);
+    --bs-gradient: none;
+}
+
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--secondary-color);
+    --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--secondary-color-hover);
+    --bs-btn-hover-border-color: var(--secondary-color-hover);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--secondary-color-hover);
+    --bs-btn-active-border-color: var(--secondary-color-hover);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--secondary-color);
+    --bs-btn-disabled-border-color: var(--secondary-color);
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: var(--secondary-color);
+    --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--secondary-color);
+    --bs-btn-hover-border-color: var(--secondary-color);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--secondary-color);
+    --bs-btn-active-border-color: var(--secondary-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--secondary-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--secondary-color);
+    --bs-gradient: none;
+}
+
+.nav-pills .nav-link {
+    color: var(--primary-color);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: var(--primary-color);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--primary-color);
+}
+
+body{
+    overflow-y: scroll;
+}
+
+#steps-tab .nav-link{
+    color: gray;
+    font-size: 0.8rem;
+}
+#steps-tab.nav-pills .nav-link.active, #steps-tab.nav-pills .show > .nav-link {
+    color: black;
+    background-color: white ;
+}
+#steps-tab.nav-pills.primary .nav-link.active, #steps-tab.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: var(--primary-color) ;
+}
+
+/* small, .small {
+    font-size: 0.7em;
+} */
+#importTeam{
+    height: 95%;
+}
+#court_settings{
+    height: 95%;
+}
+#phase_settings{
+    height: 95%;
+}
+#date_settings{
+    height: 95%;
+}
+
+.badge-men{
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+.badge-women{
+background-color: #fce7f3;
+color: #9d174d;
+}
+.badge-mixed{
+background-color: #f3e8ff;
+color: #6b21a8;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+th, td, tr,
+.table > thead > tr > th {
+    border: none;
+}
+
+.title{
+    font-size: 4.5rem;
+}
+.subtitle{
+    font-size: 1.2rem;
+}
+
+#scoreMatch{
+    height: 100%;
+}
+#preview{
+    height: 100%;
+}
+#editMatch{
+    height: 100%;
+}
+#crossMatch{
+    height: 100%;
+}
+#newPlayers{
+    height: 100%;
+}
+#editPlayers{
+    height: 100%;
+}
+
+#score-container{
+    align-content: center;
+}
+
+.table-winner, .table-winner td{
+    background-color: #22c55e0f !important;
+}
+
+.team-winner{
+    border-radius: 0.5rem;
+    background-color: #22c55e1c !important;
+}
+
+.bloqueo>td {
+    background-color: #f8d7da !important; /* light red */
+}
+.sin_descanso>td {
+    background-color: #fff3cd !important; /* light yellow */
+}
+.descanso_parcial>td {
+    background-color: #f7f7f7 !important; /* light yellow */
+}
+
+ .bloqueo-player {
+        color: red;
+        font-weight: bold;
+    }
+
+.nav-link-success .nav-link-success.active, .nav-pills .show>.nav-link-success {
+    background-color: var(--success-color) !important;
+    color: white !important;
+}
+.nav-link-success .nav-link-success.active i, .nav-pills .show>.nav-link-success i{
+    color: white !important;
+}
+
+.nav-link-success.active i {
+    /* font-weight: bold; */
+    color: white !important;
+    }
+
+.nav-link-success{
+    border: 1px solid var(--success-color);
+    color: var(--success-color) !important;
+}
+
+.nav-link-success i{
+    color: var(--success-color) !important;
+}
+
+.nav-pills .nav-link-success.active,
+.nav-pills .show>.nav-link-success {
+    color: white !important;
+    background-color: var(--success-color) !important;
+
+}
+
+
+@media (max-width: 768px) {
+
+.title{
+    font-size: 3rem;
+}
+}
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+.feature-icon-circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+}
+
+
+#tour-bg {
+    position: relative;
+    /* height: 80vh; */
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+#tour-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: 0;
+}
+
+
+#hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.h-40{
+    height: 40% !important;
+}
