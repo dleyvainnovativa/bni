@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>BNI</title>
-    <meta name="description" content="Tu experiencia de pádel.">
+    <meta name="description" content="BNI | Directorio">
     <!-- Options: default | black | black-translucent -->
     <meta name="theme-color" content="#CF2030">
 
@@ -29,7 +29,7 @@
                     <small class="subtitle">Descubre y conéctate con empresas innovadoras de diversas industrias. Crea relaciones comerciales significativas que impulsen el crecimiento.</small>
                 </div>
                 <div class="col-12 py-4">
-                    <button class="btn btn-light text-primary btn-lg"><i class="fas fa-search me-3"></i>Buscar empresas</button>
+                    <a class="btn btn-light text-primary btn-lg" href="{{env('APP_URL')}}search"><i class="fas fa-search me-3"></i>Buscar empresas</a>
                 </div>
             </div>
         </div>
