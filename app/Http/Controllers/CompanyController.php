@@ -65,6 +65,7 @@ class CompanyController extends Controller
                     'name' => $row['company_name'],
                     'founder' => $row['founder'],
                     'about_us' => $row['about_us'],
+                    'location' => $row['location'],
                     'location_text' => $row['location_text'],
                     'mail' => $row['mail'],
                     'phone' => $row['phone'],

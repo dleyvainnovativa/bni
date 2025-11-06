@@ -79,20 +79,21 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="fw-bold">Información de Contacto</h4>
+                        <h4 class="fw-bold">Contacto</h4>
                         <div class="py-4">
 
                             <div class="">
                                 <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-location"></i> Ubicación</p>
-                                <p class="text-muted">{{$company["location_text"]}}</p>
+                                <p><a href='{{$company["location"]}}' class="text-muted">{{$company["location_text"]}}</a></p>
                             </div>
                             <div class="">
                                 <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-envelope"></i> Correo</p>
-                                <p class="text-muted">{{$company["mail"]}}</p>
+                                <p><a href='mailto:{{$company["mail"]}}' class="text-muted">{{$company["mail"]}}</a></p>
+                                <!-- <p class="text-muted">{{$company["mail"]}}</p> -->
                             </div>
                             <div class="">
                                 <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-phone"></i> Teléfono</p>
-                                <p class="text-muted">{{$company["phone"]}}</p>
+                                <p><a href='tel:{{$company["phone"]}}' class="text-muted">{{$company["phone"]}}</a></p>
                             </div>
                             <button class="w-100 btn btn-primary">Contactar</button>
                         </div>
