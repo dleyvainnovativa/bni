@@ -28,7 +28,7 @@
         </div>
     </section>
     <div class="py-4 container">
-        <div class="py-5 bg-white">
+        <div class="bg-white">
             <div class="">
                 <div class="row g-4">
                     @foreach ($companies as $company)
