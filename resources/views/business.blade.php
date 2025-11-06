@@ -38,7 +38,7 @@
 
     <section class="py-4 container">
         <div class="row g-4">
-            <div class="col-md-8 col-12">
+            <div class="col-lg-8 col-md-12 col-12">
                 <div class="py-4">
                     @foreach ($company["categories"] as $category)
                     <span class="text-bg-primary badge"><i class=""></i>{{$category["name"]}}</span>
@@ -46,35 +46,40 @@
                 </div>
                 <h1 class="fw-bold">{{$company["name"]}}</h1>
                 <p><i class="fa-regular fa-user me-2"></i>Fundada por {{$company["founder"]}}</p>
+                <!-- <hr> -->
                 <div class="py-2">
-                    <div class="p-4 card">
-                        <h3>Acerca de nosotros</h3>
-                        <p>{{$company["about_us"]}}</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="fw-bold">Acerca de nosotros</h3>
+                            <p>{{$company["about_us"]}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-12">
-                <div class="card p-4">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="card">
+                    <div class="card-body">
 
-                    <h4>Información de Contacto</h4>
-                    <div class="py-4">
+                        <h4 class="fw-bold">Información de Contacto</h4>
+                        <div class="py-4">
 
-                        <div class="">
-                            <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-location"></i> Ubicación</p>
-                            <p class="text-muted">{{$company["location_text"]}}</p>
+                            <div class="">
+                                <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-location"></i> Ubicación</p>
+                                <p class="text-muted">{{$company["location_text"]}}</p>
+                            </div>
+                            <div class="">
+                                <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-envelope"></i> Correo</p>
+                                <p class="text-muted">{{$company["mail"]}}</p>
+                            </div>
+                            <div class="">
+                                <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-phone"></i> Teléfono</p>
+                                <p class="text-muted">{{$company["phone"]}}</p>
+                            </div>
+                            <button class="w-100 btn btn-primary">Contactar</button>
                         </div>
-                        <div class="">
-                            <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-envelope"></i> Correo</p>
-                            <p class="text-muted">{{$company["mail"]}}</p>
-                        </div>
-                        <div class="">
-                            <p class="p-0 m-0 fw-bold"><i class="text-primary fas fa-phone"></i> Teléfono</p>
-                            <p class="text-muted">{{$company["phone"]}}</p>
-                        </div>
-                        <button class="w-100 btn btn-primary">Contactar</button>
+
+
                     </div>
-
-
                 </div>
             </div>
         </div>

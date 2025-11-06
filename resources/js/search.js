@@ -1,43 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("searchInput");
-    const categoryFilter = document.getElementById("categoryFilter");
-    const companyCards = document.querySelectorAll(".card.h-100"); // company cards
-    const companyLinks = document.querySelectorAll("a.text-decoration-none"); // links wrapping cards
+    const categoryCheckboxes = document.querySelectorAll(".category-filter");
+    const companyCards = document.querySelectorAll("a.col-12.col-md-6.col-lg-4");
+
+    // Normalize text for case/accent-insensitive search
+    const normalize = (str) =>
+        str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     function filterCompanies() {
-        const searchValue = searchInput.value.toLowerCase().trim();
-        const selectedCategory = categoryFilter.value;
+        const searchValue = normalize(searchInput.value.trim());
+        const selectedCategories = Array.from(categoryCheckboxes)
+            .filter(cb => cb.checked)
+            .map(cb => cb.value);
 
-        companyLinks.forEach(link => {
-            const companyName = link.querySelector(".card-title").textContent.toLowerCase();
-            const founderName = link.querySelector(".fa-user").parentElement.nextElementSibling?.textContent.toLowerCase() || "";
-            const categoryBadges = Array.from(link.querySelectorAll(".badge.text-bg-primary"))
-                .map(badge => badge.textContent.trim());
+        companyCards.forEach(card => {
+            const name = normalize(card.querySelector(".card-title").innerText);
+            const founder = normalize(card.querySelector(".fa-user")?.parentElement?.innerText || "");
             
-            // Check name or founder match
-            const matchesSearch = !searchValue ||
-                companyName.includes(searchValue) ||
-                founderName.includes(searchValue);
+            // The company categories (as IDs) — set this in your Blade
+            const cardCategories = card.dataset.categories
+                ? card.dataset.categories.split(",")
+                : [];
 
-            // Check category match
-            const matchesCategory = !selectedCategory ||
-                categoryBadges.includes(getCategoryNameById(selectedCategory));
+            const matchesSearch =
+                !searchValue ||
+                name.includes(searchValue) ||
+                founder.includes(searchValue);
 
-            if (matchesSearch && matchesCategory) {
-                link.style.display = "";
-            } else {
-                link.style.display = "none";
-            }
+            const matchesCategory =
+                selectedCategories.length === 0 ||
+                selectedCategories.some(cat => cardCategories.includes(cat));
+
+            card.style.display = matchesSearch && matchesCategory ? "" : "none";
         });
-    }
-
-    // Helper to map category ID to name (grabbed from your select)
-    function getCategoryNameById(id) {
-        const option = categoryFilter.querySelector(`option[value='${id}']`);
-        return option ? option.textContent.trim() : "";
     }
 
     // Event listeners
     searchInput.addEventListener("input", filterCompanies);
-    categoryFilter.addEventListener("change", filterCompanies);
+    categoryCheckboxes.forEach(cb => cb.addEventListener("change", filterCompanies));
 });

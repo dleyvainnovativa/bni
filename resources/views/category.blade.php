@@ -20,8 +20,9 @@
         <div class="container align-content-start" id="hero-content">
             <div class="row g-2 text-start">
                 <div class="col-12 col-md-8">
-                    <h2 class="title">{{$category["category_name"]}}</h2>
-                    <p>{{$category["company_count"]}} empresas en esta categoría</p>
+                    <h2 class="subtitle">{{$category["category_name"]}}</h2>
+                    <h4>{{$category["category_description"]}}</h4>
+                    <small class="text-decoration-underline">{{$category["company_count"]}} empresas en esta categoría</small>
                 </div>
             </div>
         </div>
@@ -32,11 +33,11 @@
                 <div class="row g-4">
                     @foreach ($companies as $company)
 
-                    <a href="{{env('APP_URL')}}business/{{$company['id']}}" class="col-12 col-md-4 text-decoration-none"
+                    <a href="{{env('APP_URL')}}business/{{$company['id']}}" class="col-12 col-md-6 col-lg-4 text-decoration-none"
                         data-type="{{ $tour['class_type'] ?? '' }}"
                         data-category="{{ $tour['class_category'] ?? '' }}"
                         data-name="data-name">
-                        <div class="card h-100 card-shadow">
+                        <div class="card h-100 shadow-sm">
                             <div class="position-absolute">
                                 <span class="badge text-bg-primary p-2 m-2"></span>
                             </div>

@@ -5,7 +5,8 @@
     --light-color: #d8d8d8;
     --success-color: #198754;
     --danger-color: #dc3545;
-    --primary-color-hover: #1158bb;
+    --primary-color-hover: rgb(171, 26, 38);
+    --light-color-hover: #cf202f27;
     --secondary-color: #3278da;
     --secondary-color-hover: #2c6bc2;
     --bs-nav-pills-link-active-bg: var(--primary-color);
@@ -156,91 +157,26 @@ th, td, tr,
 .title{
     font-size: 4.5rem;
 }
-.subtitle{
+.description{
     font-size: 1.2rem;
 }
 
-#scoreMatch{
-    height: 100%;
-}
-#preview{
-    height: 100%;
-}
-#editMatch{
-    height: 100%;
-}
-#crossMatch{
-    height: 100%;
-}
-#newPlayers{
-    height: 100%;
-}
-#editPlayers{
-    height: 100%;
-}
 
-#score-container{
-    align-content: center;
-}
-
-.table-winner, .table-winner td{
-    background-color: #22c55e0f !important;
-}
-
-.team-winner{
-    border-radius: 0.5rem;
-    background-color: #22c55e1c !important;
-}
-
-.bloqueo>td {
-    background-color: #f8d7da !important; /* light red */
-}
-.sin_descanso>td {
-    background-color: #fff3cd !important; /* light yellow */
-}
-.descanso_parcial>td {
-    background-color: #f7f7f7 !important; /* light yellow */
-}
-
- .bloqueo-player {
-        color: red;
-        font-weight: bold;
-    }
-
-.nav-link-success .nav-link-success.active, .nav-pills .show>.nav-link-success {
-    background-color: var(--success-color) !important;
-    color: white !important;
-}
-.nav-link-success .nav-link-success.active i, .nav-pills .show>.nav-link-success i{
-    color: white !important;
-}
-
-.nav-link-success.active i {
-    /* font-weight: bold; */
-    color: white !important;
-    }
-
-.nav-link-success{
-    border: 1px solid var(--success-color);
-    color: var(--success-color) !important;
-}
-
-.nav-link-success i{
-    color: var(--success-color) !important;
-}
-
-.nav-pills .nav-link-success.active,
-.nav-pills .show>.nav-link-success {
-    color: white !important;
-    background-color: var(--success-color) !important;
-
+.subtitle{
+    font-size: 3.5rem;
 }
 
 
 @media (max-width: 768px) {
 
 .title{
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+.subtitle{
+    font-size: 2.2rem;
+}
+.description{
+    font-size: 1rem;
 }
 }
 
@@ -282,4 +218,32 @@ th, td, tr,
 
 .h-40{
     height: 40% !important;
+}
+
+.card{
+    border-radius: calc(.5rem + 4px) !important;
+}
+.card-footer:last-child{
+    border-bottom-right-radius: calc(.5rem + 4px) !important;
+    border-bottom-left-radius: calc(.5rem + 4px) !important;
+
+}
+.card-img, .card-img-top{
+    border-top-right-radius: calc(.5rem + 4px) !important;
+    border-top-left-radius: calc(.5rem + 4px) !important;
+}
+
+.btn-light:hover{
+    background-color: var(--light-color-hover) !important;
+    border-color: var(--light-color) !important;
+}
+.card-btn:hover{
+    background-color: var(--primary-color-hover) !important;
+    border-color: var(--primary-color) !important;
+}
+
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }

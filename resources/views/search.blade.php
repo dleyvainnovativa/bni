@@ -21,43 +21,35 @@
         <div class="container align-content-start" id="hero-content">
             <div class="row g-2 text-start">
                 <div class="col-12 col-md-8">
-                    <h2 class="title">Buscar empresas</h2>
-                    <p>Encuentra el socio comercial perfecto para tus necesidades</p>
+                    <h2 class="subtitle">Buscar empresas</h2>
+                    <h4>Encuentra el socio comercial perfecto para tus necesidades</h4>
                 </div>
             </div>
         </div>
     </section>
     <div class="py-4 container">
-        <div class="card p-4">
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-12">
-                    <label class="form-label">Buscar empresa</label>
+        <div class="">
+            <div class="row g-1">
+                <div class="col-md-12 col-12">
+                    <!-- <label class="form-label">Buscar empresa</label> -->
                     <div class="input-group mb-3">
-                        <span class="input-group-text text-bg-primary" id="basic-addon1"><i class="fa-solid fa-search"></i></span>
-                        <input class="form-control" type="text" placeholder="Escribe el nombre o fundador de la empresa" id="searchInput">
+                        <span class="input-group-text text-bg-light" id="basic-addon1"><i class="fa-solid fa-search"></i></span>
+                        <input class="form-control form-control-lg" type="text" placeholder="Empresa / Fundador" id="searchInput">
+                        <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategories" aria-controls="offcanvasCategories" class="btn btn-primary btn-lg"><i class="fas fa-filter"></i></button>
                     </div>
-                </div>
-                <div class="col-md-6 col-12">
-                    <label class="form-label">Buscar por categoría</label>
-                    <select class="form-control" name="" id="categoryFilter">
-                        <option value="" selected></option>
-                        @foreach ($categories as $category)
-                        <option value="{{$category['category_id']}}">{{$category["category_name"]}}</option>
-                        @endforeach
-                    </select>
                 </div>
             </div>
         </div>
-        <div class="py-5 bg-white">
+        <div class="py-4 bg-white">
             <div class="">
                 <div class="row g-4">
                     @foreach ($companies as $company)
 
-                    <a href="{{env('APP_URL')}}business/{{$company['id']}}" class="col-12 col-md-4 text-decoration-none"
-                        data-type="{{ $tour['class_type'] ?? '' }}"
-                        data-category="{{ $tour['class_category'] ?? '' }}"
-                        data-name="data-name">
-                        <div class="card h-100 card-shadow">
+                    <a href="{{ env('APP_URL') }}business/{{ $company['id'] }}"
+                        class="col-12 col-md-6 col-lg-4 text-decoration-none"
+                        data-categories="{{ collect($company['categories'])->pluck('id')->join(',') }}">
+
+                        <div class="card h-100 shadow-sm">
                             <div class="position-absolute">
                                 <span class="badge text-bg-primary p-2 m-2"></span>
                             </div>
@@ -89,7 +81,7 @@
                 </div>
             </div>
         </div>
-
+        @include("components.categories")
 </body>
 
 </html>

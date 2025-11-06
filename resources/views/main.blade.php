@@ -18,15 +18,15 @@
     @include('components.header')
     <section class="text-bg-primary py-5" id="tour-bg">
         <div class="container align-content-start" id="hero-content">
-            <div class="row g-2 text-start py-5">
+            <div class="row g-2 text-start py-4">
                 <!-- <div class="col-12 text-center">
                     <h4 class=""><span class="badge text-bg-light"><i class="fa-regular fa-lightbulb me-2"></i>Gestión de torneos simplificada</span></h4>
                 </div> -->
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-10 col-lg-7">
                     <h2 class="title">Conéctate con empresas líderes</h2>
                 </div>
-                <div class="col-12 col-md-8">
-                    <small class="subtitle">Descubre y conéctate con empresas innovadoras de diversas industrias. Crea relaciones comerciales significativas que impulsen el crecimiento.</small>
+                <div class="col-12 col-md-10 col-lg-8">
+                    <small class="description">Descubre y conéctate con empresas innovadoras de diversas industrias. Crea relaciones comerciales significativas que impulsen el crecimiento.</small>
                 </div>
                 <div class="col-12 py-4">
                     <a class="btn btn-light text-primary btn-lg" href="{{env('APP_URL')}}search"><i class="fas fa-search me-3"></i>Buscar empresas</a>
@@ -38,14 +38,14 @@
         <div class="container">
             <div class="text-start py-4">
                 <h1 class="fs-1 fw-bold">Explorar por categoría</h1>
-                <small class="text-muted subtitle">Descubre empresas organizadas por industria y especialidad</small>
+                <small class="text-muted description">Descubre empresas organizadas por industria y especialidad</small>
             </div>
             <div class="row g-4 py-4">
                 @foreach ($categories as $category)
 
-                <div class="col-12 col-md-4">
-                    <a href="category/{{$category['category_id']}}" class="card shadow-sm btn btn-light text-start">
-                        <div class="card-body p-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="category/{{$category['category_id']}}" class="card h-100 shadow-sm btn btn-light text-start">
+                        <div class="card-body">
                             <div class="feature col">
                                 <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient mb-3">
                                     <i class="{{$category['icon']}} fa-lg"></i>
@@ -68,19 +68,19 @@
             <div class="row">
                 <div class="col-6 col-md-3">
                     <h1 class="text-primary fw-bold">109</h1>
-                    <p>Compañías</p>
+                    <p class="text-muted">Compañías</p>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h1 class="text-primary fw-bold">109</h1>
-                    <p>Categorías</p>
+                    <h1 class="text-primary fw-bold">6</h1>
+                    <p class="text-muted">Categorías</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <h1 class="text-primary fw-bold">4</h1>
-                    <p>Capítulos</p>
+                    <p class="text-muted">Capítulos</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <h1 class="text-primary fw-bold">24/7</h1>
-                    <p>Soporte</p>
+                    <p class="text-muted">Soporte</p>
                 </div>
             </div>
         </div>
