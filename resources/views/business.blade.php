@@ -8,7 +8,7 @@
     <meta name="description" content="Tu experiencia de pádel.">
     <meta name="theme-color" content="#CF2030">
 
-    @vite(['resources/scss/app.scss', 'resources/js/app.js','resources/css/theme.css','resources/js/business.js'
+    @vite(['resources/scss/app.scss', 'resources/js/app.js','resources/css/theme.css',
     ])
     <script preload src="https://kit.fontawesome.com/d544c5e79c.js" crossorigin="anonymous"></script>
     <style>
