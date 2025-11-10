@@ -71,6 +71,7 @@ class CompanyController extends Controller
                     'phone' => $row['phone'],
                     'banner' => $row['banner'],
                     'logo' => $row['logo'],
+                    'catalog' => $row['catalog'],
                     'categories' => [],
                 ];
             }

@@ -253,3 +253,20 @@ th, td, tr,
     object-fit: cover;
     height: 14rem;
 }
+    #save-contact-fixed-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: all 0.2s ease;
+    }
+
+    #save-contact-fixed-wrapper.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }

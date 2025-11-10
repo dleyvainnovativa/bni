@@ -31,6 +31,19 @@
         <div class="bg-white">
             <div class="">
                 <div class="row g-4">
+
+                    @if (empty($companies))
+                    <div class="col-12 col-md-12 col-lg-12 text-decoration-none">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">No hay empresas todavía</h5>
+                                <p>Se cargarán lo más pronto posible</p>
+                            </div>
+                        </div>
+                    </div>
+                    @else
+
+
                     @foreach ($companies as $company)
 
                     <a href="{{env('APP_URL')}}business/{{$company['id']}}" class="col-12 col-md-6 col-lg-4 text-decoration-none"
@@ -70,6 +83,8 @@
                         </div>
                     </a>
                     @endforeach
+                    @endif
+
                 </div>
             </div>
         </div>
